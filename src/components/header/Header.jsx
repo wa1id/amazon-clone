@@ -7,7 +7,7 @@ import HeaderOption from "./HeaderOption";
 import { useStateValue } from "../StateProvidor";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <div className="header">

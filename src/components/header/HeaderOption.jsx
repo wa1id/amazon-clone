@@ -1,4 +1,3 @@
-import { Link } from "@material-ui/core";
 import React from "react";
 
 const HeaderOption = ({ lineOne, lineTwo }) => {
