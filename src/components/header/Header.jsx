@@ -32,7 +32,7 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to={!user && "/login"}>
+        <Link to={user ? "" : "/login"}>
           <HeaderOption
             lineOne="Hello Guest"
             lineTwo={user ? "Sign out" : "Sign in"}
