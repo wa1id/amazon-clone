@@ -1,22 +1,22 @@
 import React from "react";
 import "./Product.css";
-import {useStateValue} from "./StateProvidor";
+import { useStateValue } from "./StateProvidor";
 
-function Product({id, title, image, price, rating}) {
-  const [{basket}, dispatch] = useStateValue();
+function Product({ id, title, image, price, rating }) {
+  const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
-      type: 'ADD_TO_BASKET',
+      type: "ADD_TO_BASKET",
       item: {
         id: id,
         title: title,
         image: image,
         price: price,
-        rating: rating
-      }
-    })
-  }
+        rating: rating,
+      },
+    });
+  };
 
   return (
     <div className="product">
@@ -30,12 +30,16 @@ function Product({id, title, image, price, rating}) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p>
+                <span role="img" aria-label="rating-star">
+                  ⭐
+                </span>
+              </p>
             ))}
         </div>
       </div>
 
-      <img src={image} alt=""/>
+      <img src={image} alt="" />
       <button onClick={addToBasket}>Add to basket</button>
     </div>
   );
