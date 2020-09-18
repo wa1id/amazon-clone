@@ -1,6 +1,7 @@
-import React from 'react';
+import { Link } from "@material-ui/core";
+import React from "react";
 
-const HeaderOption = ({lineOne, lineTwo}) => {
+const HeaderOption = ({ lineOne, lineTwo }) => {
   return (
     <div className="header__option">
       <span className="header__option-one">{lineOne}</span>
